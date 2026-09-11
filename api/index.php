@@ -224,7 +224,7 @@
         <div>
             <h1>Hello, I'm <span>Douae</span></h1>
 
-            <p>Graphic Designer & Web Developer</p>
+            <p>Web Developer</p>
 
             <a href="#projects" class="btn">
                 View My Work
