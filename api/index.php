@@ -207,7 +207,7 @@
     <!-- NAVBAR -->
     <nav>
 
-        <h2>PHMR</h2>
+        <h2>douae</h2>
 
         <ul>
             <li><a href="#home">Home</a></li>
@@ -225,7 +225,7 @@
 
         <div>
 
-            <h1>Hello, I'm <span>PHMR</span></h1>
+            <h1>Hello, I'm <span>douae</span></h1>
 
             <p>Web Developer</p>
 
