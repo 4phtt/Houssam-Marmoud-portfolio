@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Portfolio</title>
+    <title>Web Developer Portfolio</title>
 
     <style>
         * {
@@ -186,6 +186,7 @@
 
         /* MOBILE */
         @media (max-width: 700px) {
+
             nav {
                 flex-direction: column;
                 gap: 15px;
@@ -206,7 +207,8 @@
 
     <!-- NAVBAR -->
     <nav>
-        <h2>PHMR.DSN</h2>
+
+        <h2>PHMR</h2>
 
         <ul>
             <li><a href="#home">Home</a></li>
@@ -215,6 +217,7 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+
     </nav>
 
 
@@ -222,13 +225,15 @@
     <section id="home">
 
         <div>
+
             <h1>Hello, I'm <span>PHMR</span></h1>
 
-            <p>Creative Designer & Web Developer</p>
+            <p>Web Developer</p>
 
             <a href="#projects" class="btn">
                 View My Work
             </a>
+
         </div>
 
     </section>
@@ -240,12 +245,14 @@
         <h2>About Me</h2>
 
         <div class="about">
+
             <p>
-                Hello! I'm a creative designer and developer passionate
-                about creating modern and attractive digital experiences.
-                I enjoy working on graphic design, websites and creative
-                projects.
+                Hello! I'm a passionate Web Developer interested in
+                creating modern, responsive and user-friendly websites.
+                I enjoy developing web applications and learning new
+                technologies.
             </p>
+
         </div>
 
     </section>
@@ -275,11 +282,7 @@
             </div>
 
             <div class="skill">
-                <h3>Photoshop</h3>
-            </div>
-
-            <div class="skill">
-                <h3>Graphic Design</h3>
+                <h3>MySQL</h3>
             </div>
 
         </div>
@@ -295,27 +298,38 @@
         <div class="projects">
 
             <div class="project">
+
                 <h3>Portfolio Website</h3>
+
                 <p>
-                    A personal portfolio website created using
+                    A personal portfolio website developed using
                     HTML, CSS and PHP.
                 </p>
+
             </div>
 
-            <div class="project">
-                <h3>Web Project</h3>
-                <p>
-                    A modern website project developed using
-                    HTML, CSS and PHP.
-                </p>
-            </div>
 
             <div class="project">
-                <h3>Creative Project</h3>
+
+                <h3>Web Application</h3>
+
                 <p>
-                    A creative digital project focused on modern
-                    design and user experience.
+                    A web application developed using PHP,
+                    MySQL, HTML and CSS.
                 </p>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>Responsive Website</h3>
+
+                <p>
+                    A responsive website designed to work on
+                    computers, tablets and mobile devices.
+                </p>
+
             </div>
 
         </div>
@@ -367,7 +381,7 @@
     <footer>
 
         <p>
-            © <?php echo date("Y"); ?> PHMR.DSN. All rights reserved.
+            © <?php echo date("Y"); ?> PHMR. All rights reserved.
         </p>
 
     </footer>
