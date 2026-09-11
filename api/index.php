@@ -206,7 +206,7 @@
 
     <!-- NAVBAR -->
     <nav>
-        <h2>PHMR.DSN</h2>
+        <h2>Douae</h2>
 
         <ul>
             <li><a href="#home">Home</a></li>
@@ -222,7 +222,7 @@
     <section id="home">
 
         <div>
-            <h1>Hello, I'm <span>PHMR</span></h1>
+            <h1>Hello, I'm <span>Douae</span></h1>
 
             <p>Graphic Designer & Web Developer</p>
 
