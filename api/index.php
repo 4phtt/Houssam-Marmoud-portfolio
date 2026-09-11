@@ -1,3 +1,4 @@
+```php
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +22,6 @@
         }
 
         /* NAVBAR */
-        
         nav {
             background: #111;
             padding: 20px 8%;
@@ -206,7 +206,7 @@
 
     <!-- NAVBAR -->
     <nav>
-        <h2>Douae</h2>
+        <h2>PHMR.DSN</h2>
 
         <ul>
             <li><a href="#home">Home</a></li>
@@ -222,9 +222,9 @@
     <section id="home">
 
         <div>
-            <h1>Hello, I'm <span>Douae</span></h1>
+            <h1>Hello, I'm <span>PHMR</span></h1>
 
-            <p>Web Developer</p>
+            <p>Creative Designer & Web Developer</p>
 
             <a href="#projects" class="btn">
                 View My Work
@@ -303,18 +303,18 @@
             </div>
 
             <div class="project">
-                <h3>YouTube Thumbnails</h3>
-                <p>
-                    Creative and professional thumbnails designed
-                    for YouTube creators.
-                </p>
-            </div>
-
-            <div class="project">
                 <h3>Web Project</h3>
                 <p>
                     A modern website project developed using
                     HTML, CSS and PHP.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Creative Project</h3>
+                <p>
+                    A creative digital project focused on modern
+                    design and user experience.
                 </p>
             </div>
 
@@ -374,3 +374,4 @@
 
 </body>
 </html>
+```
