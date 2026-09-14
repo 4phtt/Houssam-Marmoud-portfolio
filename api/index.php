@@ -1,27 +1,13 @@
 ```php
 <?php
 
-$name = "HOUSSAM";
+$name = "Houssam";
+$job = "Designer & Web Developer";
 
 $projects = [
-    [
-        "number" => "01",
-        "title" => "HAIQ",
-        "category" => "BRANDING",
-        "description" => "Identité visuelle moderne et créative."
-    ],
-    [
-        "number" => "02",
-        "title" => "NOVA",
-        "category" => "WEB DESIGN",
-        "description" => "Expérience digitale immersive et interactive."
-    ],
-    [
-        "number" => "03",
-        "title" => "VISION",
-        "category" => "UI / UX",
-        "description" => "Interface minimaliste pensée pour l'utilisateur."
-    ]
+    ["name" => "HAIQ", "type" => "Branding"],
+    ["name" => "Portfolio", "type" => "Web Design"],
+    ["name" => "Creative App", "type" => "UI / UX"]
 ];
 
 ?>
@@ -34,782 +20,321 @@ $projects = [
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title><?= $name ?> — Creative Portfolio</title>
+<title><?= $name ?> | Portfolio</title>
 
 <style>
 
-/* =========================
-   RESET
-========================= */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    background:#080808;
-    color:#f5f5f5;
-    font-family:Arial, Helvetica, sans-serif;
-    overflow-x:hidden;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-
-/* =========================
-   CUSTOM CURSOR
-========================= */
-
-.cursor{
-    position:fixed;
-    width:18px;
-    height:18px;
-
-    border:1px solid #c8ff00;
-    border-radius:50%;
-
-    pointer-events:none;
-    z-index:9999;
-
-    transform:translate(-50%,-50%);
-
-    transition:
-        width .2s,
-        height .2s,
-        background .2s;
-}
-
-
-/* =========================
-   NAVBAR
-========================= */
-
-nav{
-    position:fixed;
-    top:0;
-    left:0;
-
-    width:100%;
-
-    padding:25px 7%;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    z-index:1000;
-
-    background:rgba(8,8,8,.75);
-    backdrop-filter:blur(15px);
-
-    border-bottom:1px solid #181818;
-}
-
-.logo{
-    font-size:25px;
-    font-weight:900;
-    letter-spacing:-2px;
-}
-
-.logo span{
-    color:#c8ff00;
-}
-
-.menu{
-    display:flex;
-    gap:35px;
-}
-
-.menu a{
-    font-size:12px;
-    color:#777;
-
-    transition:.3s;
-}
-
-.menu a:hover{
-    color:#c8ff00;
-}
-
-.contact-btn{
-    padding:11px 20px;
-
-    border:1px solid #333;
-    border-radius:30px;
-
-    font-size:12px;
-
-    transition:.3s;
-}
-
-.contact-btn:hover{
-    background:#c8ff00;
-    color:#000;
-}
-
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-    min-height:100vh;
-
-    padding:150px 8% 80px;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-
-    position:relative;
-}
-
-.hero-small{
-    color:#777;
-    font-size:11px;
-    letter-spacing:4px;
-
-    margin-bottom:30px;
-}
-
-.hero h1{
-    font-size:clamp(60px,11vw,170px);
-
-    line-height:.82;
-
-    letter-spacing:-10px;
-
-    max-width:1200px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.hero h1 span{
-    color:#c8ff00;
+html {
+    scroll-behavior: smooth;
 }
-
-.hero-text{
-    margin-top:45px;
-
-    max-width:500px;
-
-    color:#777;
 
-    line-height:1.7;
-
-    font-size:15px;
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f3;
+    color: #111;
 }
-
-.hero-buttons{
-    display:flex;
-    gap:15px;
 
-    margin-top:35px;
-}
 
-.btn{
-    padding:15px 25px;
+/* NAVBAR */
 
-    border-radius:30px;
+nav {
+    height: 70px;
+    padding: 0 8%;
 
-    font-size:12px;
-}
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-.btn-main{
-    background:#c8ff00;
-    color:#000;
+    border-bottom: 1px solid #ddd;
 }
 
-.btn-outline{
-    border:1px solid #333;
+.logo {
+    font-size: 22px;
+    font-weight: bold;
 }
-
 
-/* =========================
-   DECORATION
-========================= */
-
-.hero-circle{
-    position:absolute;
-
-    width:420px;
-    height:420px;
-
-    right:7%;
-    top:50%;
-
-    transform:translateY(-50%);
-
-    border:1px solid #222;
-
-    border-radius:50%;
-
-    animation:rotate 15s linear infinite;
+.menu {
+    display: flex;
+    gap: 30px;
 }
-
-.hero-circle:before{
-
-    content:"";
-
-    position:absolute;
 
-    width:12px;
-    height:12px;
-
-    background:#c8ff00;
-
-    border-radius:50%;
-
-    top:30px;
-    left:50%;
-
+.menu a {
+    text-decoration: none;
+    color: #111;
+    font-size: 14px;
 }
-
-.hero-circle:after{
-
-    content:"CREATIVE • DESIGN • CODE • ";
-
-    position:absolute;
-
-    width:100%;
-    height:100%;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
 
-    color:#333;
-
-    font-size:11px;
-
-    letter-spacing:3px;
-
+.menu a:hover {
+    color: #777;
 }
-
-
-/* =========================
-   FLOATING WORDS
-========================= */
 
-.floating{
-    position:absolute;
 
-    padding:12px 18px;
+/* HERO */
 
-    border:1px solid #333;
+.hero {
+    min-height: 85vh;
 
-    border-radius:30px;
+    padding: 100px 8%;
 
-    font-size:10px;
-
-    background:#111;
-
-    animation:float 3s ease-in-out infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.f1{
-    right:25%;
-    top:25%;
+.hero p {
+    color: #777;
+    margin-bottom: 20px;
 }
 
-.f2{
-    right:5%;
-    bottom:20%;
-    animation-delay:1s;
+.hero h1 {
+    font-size: clamp(55px, 9vw, 120px);
+    line-height: .9;
+    letter-spacing: -5px;
+    max-width: 900px;
 }
-
-.f3{
-    right:30%;
-    bottom:15%;
-    background:#c8ff00;
-    color:#000;
-    animation-delay:2s;
-}
-
 
-/* =========================
-   MARQUEE
-========================= */
-
-.marquee{
-    border-top:1px solid #222;
-    border-bottom:1px solid #222;
-
-    overflow:hidden;
-
-    white-space:nowrap;
-
-    padding:25px 0;
+.hero h1 span {
+    color: #777;
 }
 
-.marquee-track{
-    display:inline-block;
+.hero .description {
+    margin-top: 35px;
+    max-width: 500px;
 
-    animation:marquee 18s linear infinite;
-
-    font-size:20px;
-
-    letter-spacing:5px;
+    line-height: 1.7;
+    color: #666;
 }
-
-.marquee span{
-    color:#c8ff00;
-}
-
 
-/* =========================
-   GENERAL SECTION
-========================= */
 
-section{
-    padding:150px 8%;
-}
+/* BUTTON */
 
-.label{
-    color:#555;
+.button {
+    display: inline-block;
 
-    font-size:10px;
+    margin-top: 30px;
 
-    letter-spacing:4px;
+    padding: 14px 22px;
 
-    margin-bottom:70px;
-}
+    background: #111;
+    color: white;
 
-.section-title{
-    font-size:clamp(50px,8vw,110px);
+    text-decoration: none;
 
-    line-height:.9;
+    border-radius: 3px;
 
-    letter-spacing:-6px;
+    font-size: 13px;
 }
 
-.section-title span{
-    color:#c8ff00;
+.button:hover {
+    background: #444;
 }
 
 
-/* =========================
-   ABOUT
-========================= */
-
-.about{
-    display:grid;
-
-    grid-template-columns:30% 70%;
-}
+/* SECTIONS */
 
-.about-text{
-    max-width:750px;
+section {
+    padding: 100px 8%;
 }
 
-.about-text p{
-    color:#888;
+.title {
+    font-size: 12px;
+    color: #888;
 
-    line-height:1.9;
+    margin-bottom: 50px;
 
-    font-size:17px;
-
-    margin-bottom:25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
-
-
-/* =========================
-   PROJECTS
-========================= */
-
-.projects-header{
-
-    display:flex;
 
-    justify-content:space-between;
 
-    align-items:end;
+/* ABOUT */
 
-    margin-bottom:70px;
+.about {
+    display: grid;
+    grid-template-columns: 30% 70%;
 
+    border-top: 1px solid #ddd;
 }
 
-.projects-header p{
-    color:#666;
-
-    max-width:250px;
-
-    line-height:1.6;
-}
-
-.project{
-    border-top:1px solid #292929;
-
-    padding:45px 0;
-
-    display:grid;
-
-    grid-template-columns:10% 35% 40% 15%;
-
-    align-items:center;
-
-    transition:.4s;
-
-    cursor:pointer;
+.about-text {
+    max-width: 700px;
 }
 
-.project:last-child{
-    border-bottom:1px solid #292929;
+.about-text h2 {
+    font-size: 45px;
+    margin-bottom: 25px;
 }
-
-.project:hover{
-    padding-left:25px;
-    padding-right:25px;
 
-    background:#101010;
+.about-text p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 15px;
 }
 
-.project-number{
-    color:#555;
 
-    font-size:12px;
-}
+/* PROJECTS */
 
-.project-title{
-    font-size:50px;
-
-    letter-spacing:-3px;
+.projects {
+    border-top: 1px solid #ddd;
 }
 
-.project-category{
-    color:#c8ff00;
+.project {
+    display: grid;
 
-    font-size:11px;
+    grid-template-columns: 10% 50% 30% 10%;
 
-    letter-spacing:2px;
-}
+    align-items: center;
 
-.project-description{
-    color:#666;
+    padding: 30px 0;
 
-    font-size:13px;
+    border-top: 1px solid #ddd;
 
-    margin-top:8px;
+    transition: .3s;
 }
 
-.project-arrow{
-    font-size:30px;
-
-    text-align:right;
-
-    transition:.3s;
+.project:last-child {
+    border-bottom: 1px solid #ddd;
 }
 
-.project:hover .project-arrow{
-    transform:translateX(10px);
-    color:#c8ff00;
+.project:hover {
+    padding-left: 15px;
 }
-
-
-/* =========================
-   SKILLS
-========================= */
-
-.skills{
-    background:#c8ff00;
 
-    color:#000;
+.project-number {
+    color: #999;
 }
 
-.skills .label{
-    color:#333;
+.project-name {
+    font-size: 28px;
+    font-weight: bold;
 }
 
-.skills .section-title span{
-    color:#000;
+.project-type {
+    color: #777;
+    font-size: 13px;
 }
 
-.skills-grid{
-    margin-top:80px;
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    border-top:1px solid #000;
+.arrow {
+    text-align: right;
+    font-size: 20px;
 }
-
-.skill{
-    padding:45px 20px;
 
-    border-bottom:1px solid #000;
-}
 
-.skill:nth-child(odd){
-    border-right:1px solid #000;
-}
+/* SKILLS */
 
-.skill-number{
-    font-size:11px;
+.skills {
+    border-top: 1px solid #ddd;
 }
 
-.skill h3{
-    font-size:30px;
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 
-    margin:30px 0 15px;
-
-    letter-spacing:-1px;
+    max-width: 800px;
 }
 
-.skill p{
-    max-width:400px;
+.skill {
+    padding: 25px 0;
 
-    line-height:1.6;
+    border-bottom: 1px solid #ddd;
 
-    font-size:14px;
+    font-size: 18px;
 }
-
-
-/* =========================
-   CONTACT
-========================= */
 
-.contact{
-    min-height:80vh;
 
-    display:flex;
+/* CONTACT */
 
-    flex-direction:column;
+.contact {
+    background: #111;
+    color: white;
 
-    justify-content:center;
+    text-align: center;
 }
 
-.contact h2{
-    font-size:clamp(60px,10vw,150px);
+.contact h2 {
+    font-size: clamp(50px, 8vw, 100px);
 
-    line-height:.85;
-
-    letter-spacing:-8px;
+    letter-spacing: -4px;
 }
 
-.contact h2 span{
-    color:#c8ff00;
+.contact p {
+    color: #aaa;
+    margin-top: 20px;
 }
-
-.email{
-    margin-top:60px;
 
-    font-size:20px;
+.contact a {
+    display: inline-block;
 
-    width:max-content;
+    margin-top: 30px;
 
-    border-bottom:1px solid #c8ff00;
-
-    padding-bottom:8px;
-
-    transition:.3s;
-}
+    color: white;
 
-.email:hover{
-    color:#c8ff00;
+    text-decoration: underline;
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
-footer{
-    border-top:1px solid #222;
+footer {
+    background: #111;
 
-    padding:30px 8%;
+    color: #666;
 
-    display:flex;
+    padding: 30px 8%;
 
-    justify-content:space-between;
+    border-top: 1px solid #333;
 
-    color:#555;
-
-    font-size:11px;
-}
-
-.socials{
-    display:flex;
-
-    gap:25px;
-}
+    display: flex;
+    justify-content: space-between;
 
-.socials a:hover{
-    color:#c8ff00;
+    font-size: 12px;
 }
 
 
-/* =========================
-   ANIMATIONS
-========================= */
+/* RESPONSIVE */
 
-@keyframes rotate{
+@media (max-width: 700px) {
 
-    from{
-        transform:translateY(-50%) rotate(0);
+    .menu {
+        display: none;
     }
 
-    to{
-        transform:translateY(-50%) rotate(360deg);
+    .hero {
+        padding-top: 70px;
     }
 
-}
-
-@keyframes float{
-
-    0%,100%{
-        transform:translateY(0);
+    .hero h1 {
+        letter-spacing: -3px;
     }
 
-    50%{
-        transform:translateY(-20px);
+    .about {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
 
-}
-
-@keyframes marquee{
-
-    from{
-        transform:translateX(0);
+    .project {
+        grid-template-columns: 15% 55% 30%;
     }
 
-    to{
-        transform:translateX(-50%);
+    .project-type {
+        display: none;
     }
 
-}
-
-
-/* =========================
-   SCROLL ANIMATION
-========================= */
-
-.reveal{
-    opacity:0;
-
-    transform:translateY(60px);
-
-    transition:
-        opacity 1s ease,
-        transform 1s ease;
-}
-
-.reveal.active{
-    opacity:1;
-
-    transform:translateY(0);
-}
-
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media(max-width:900px){
-
-    .menu{
-        display:none;
+    .skills-list {
+        grid-template-columns: 1fr;
     }
 
-    .hero-circle{
-        opacity:.3;
-
-        width:300px;
-        height:300px;
-
-        right:-80px;
+    footer {
+        flex-direction: column;
+        gap: 10px;
     }
 
-    .floating{
-        display:none;
-    }
-
-    .about{
-        grid-template-columns:1fr;
-        gap:50px;
-    }
-
-    .projects-header{
-        display:block;
-    }
-
-    .projects-header p{
-        margin-top:30px;
-    }
-
-    .project{
-        grid-template-columns:15% 60% 25%;
-    }
-
-    .project-description{
-        display:none;
-    }
-
-    .project-title{
-        font-size:35px;
-    }
-
-    .skills-grid{
-        grid-template-columns:1fr;
-    }
-
-    .skill:nth-child(odd){
-        border-right:none;
-    }
-
-    footer{
-        flex-direction:column;
-        gap:20px;
-    }
-
-}
-
-@media(max-width:500px){
-
-    .hero h1{
-        font-size:65px;
-
-        letter-spacing:-5px;
-    }
-
-    .hero-circle{
-        width:250px;
-        height:250px;
-    }
-
-    section{
-        padding:100px 6%;
-    }
-
-    .project{
-        grid-template-columns:15% 65% 20%;
-    }
-
-    .project-title{
-        font-size:28px;
-    }
-
-    .project-arrow{
-        font-size:20px;
-    }
-
-}
-
-
-/* =========================
-   SELECTION
-========================= */
-
-::selection{
-    background:#c8ff00;
-    color:#000;
 }
 
 </style>
@@ -820,106 +345,52 @@ footer{
 <body>
 
 
-<!-- CURSOR -->
-
-<div class="cursor"></div>
-
-
 <!-- NAVIGATION -->
 
 <nav>
 
     <div class="logo">
-        H<span>.</span>
+        <?= $name ?>
     </div>
 
     <div class="menu">
 
-        <a href="#home">HOME</a>
+        <a href="#about">About</a>
 
-        <a href="#about">ABOUT</a>
+        <a href="#projects">Projects</a>
 
-        <a href="#projects">PROJECTS</a>
+        <a href="#skills">Skills</a>
 
-        <a href="#skills">SKILLS</a>
+        <a href="#contact">Contact</a>
 
     </div>
-
-    <a href="#contact" class="contact-btn">
-        CONTACT ↗
-    </a>
 
 </nav>
 
 
 <!-- HERO -->
 
-<section class="hero" id="home">
+<div class="hero">
 
-    <div class="hero-circle"></div>
-
-    <div class="floating f1">
-        DESIGN
-    </div>
-
-    <div class="floating f2">
-        DEVELOPMENT
-    </div>
-
-    <div class="floating f3">
-        ✦ CREATE
-    </div>
-
-
-    <div class="hero-small">
-        CREATIVE PORTFOLIO / 2026
-    </div>
-
-    <h1>
-        I MAKE<br>
-        <span>IDEAS</span><br>
-        REAL.
-    </h1>
-
-    <p class="hero-text">
-        Designer créatif & développeur web.
-        Je transforme les idées simples en expériences
-        digitales modernes, interactives et mémorables.
+    <p>
+        HELLO, I'M <?= strtoupper($name) ?>
     </p>
 
-    <div class="hero-buttons">
+    <h1>
+        <?= $job ?><br>
+        <span>based in Morocco.</span>
+    </h1>
 
-        <a href="#projects" class="btn btn-main">
-            EXPLORE MY WORK ↗
+    <p class="description">
+        Je crée des designs simples, modernes et efficaces
+        et je développe des expériences web adaptées aux besoins
+        des utilisateurs.
+    </p>
+
+    <div>
+        <a href="#projects" class="button">
+            Voir mes projets →
         </a>
-
-        <a href="#contact" class="btn btn-outline">
-            LET'S TALK
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- MARQUEE -->
-
-<div class="marquee">
-
-    <div class="marquee-track">
-
-        DESIGN <span>✦</span>
-        DEVELOPMENT <span>✦</span>
-        CREATIVITY <span>✦</span>
-        BRANDING <span>✦</span>
-        UI/UX <span>✦</span>
-
-        DESIGN <span>✦</span>
-        DEVELOPMENT <span>✦</span>
-        CREATIVITY <span>✦</span>
-        BRANDING <span>✦</span>
-        UI/UX <span>✦</span>
-
     </div>
 
 </div>
@@ -927,36 +398,27 @@ footer{
 
 <!-- ABOUT -->
 
-<section class="about reveal" id="about">
+<section class="about" id="about">
 
-    <div class="label">
-        01 / ABOUT ME
+    <div class="title">
+        01 — About
     </div>
 
     <div class="about-text">
 
-        <h2 class="section-title">
-            MORE THAN<br>
-            JUST <span>DESIGN.</span>
+        <h2>
+            Design with purpose.
         </h2>
 
-        <br><br>
-
         <p>
-            Je suis un créatif passionné par le design,
-            le développement web et les expériences digitales.
+            Je suis passionné par le design et le développement web.
+            J'aime transformer des idées en projets simples,
+            clairs et agréables à utiliser.
         </p>
 
         <p>
-            J'aime mélanger créativité et technologie
-            pour créer des projets qui attirent l'attention
-            et racontent une histoire.
-        </p>
-
-        <p>
-            Pour moi, un bon design n'est pas seulement
-            quelque chose de beau. Il doit avoir une identité,
-            une fonction et une émotion.
+            Mon approche est basée sur la simplicité,
+            la créativité et l'attention aux détails.
         </p>
 
     </div>
@@ -966,53 +428,31 @@ footer{
 
 <!-- PROJECTS -->
 
-<section id="projects" class="reveal">
+<section class="projects" id="projects">
 
-    <div class="label">
-        02 / SELECTED WORK
-    </div>
-
-    <div class="projects-header">
-
-        <h2 class="section-title">
-            MY<br>
-            <span>PROJECTS.</span>
-        </h2>
-
-        <p>
-            Quelques projets imaginés,
-            conçus et développés avec passion.
-        </p>
-
+    <div class="title">
+        02 — Projects
     </div>
 
 
-    <?php foreach($projects as $project): ?>
+    <?php foreach ($projects as $index => $project): ?>
 
         <div class="project">
 
             <div class="project-number">
-                <?= $project["number"] ?>
+                0<?= $index + 1 ?>
             </div>
 
-            <div>
-
-                <div class="project-title">
-                    <?= $project["title"] ?>
-                </div>
-
-                <div class="project-description">
-                    <?= $project["description"] ?>
-                </div>
-
+            <div class="project-name">
+                <?= $project["name"] ?>
             </div>
 
-            <div class="project-category">
-                <?= $project["category"] ?>
+            <div class="project-type">
+                <?= $project["type"] ?>
             </div>
 
-            <div class="project-arrow">
-                ↗
+            <div class="arrow">
+                →
             </div>
 
         </div>
@@ -1024,89 +464,36 @@ footer{
 
 <!-- SKILLS -->
 
-<section class="skills reveal" id="skills">
+<section class="skills" id="skills">
 
-    <div class="label">
-        03 / EXPERTISE
+    <div class="title">
+        03 — Skills
     </div>
 
-    <h2 class="section-title">
-        WHAT<br>
-        I <span>DO.</span>
-    </h2>
-
-
-    <div class="skills-grid">
+    <div class="skills-list">
 
         <div class="skill">
-
-            <div class="skill-number">
-                01
-            </div>
-
-            <h3>
-                UI / UX DESIGN
-            </h3>
-
-            <p>
-                Création d'interfaces modernes,
-                intuitives et centrées sur l'utilisateur.
-            </p>
-
+            UI / UX Design
         </div>
 
-
         <div class="skill">
-
-            <div class="skill-number">
-                02
-            </div>
-
-            <h3>
-                WEB DEVELOPMENT
-            </h3>
-
-            <p>
-                Développement de sites rapides,
-                responsives et interactifs.
-            </p>
-
+            Graphic Design
         </div>
 
-
         <div class="skill">
-
-            <div class="skill-number">
-                03
-            </div>
-
-            <h3>
-                BRANDING
-            </h3>
-
-            <p>
-                Création d'identités visuelles
-                fortes et reconnaissables.
-            </p>
-
+            HTML / CSS
         </div>
 
+        <div class="skill">
+            JavaScript
+        </div>
 
         <div class="skill">
+            PHP
+        </div>
 
-            <div class="skill-number">
-                04
-            </div>
-
-            <h3>
-                CREATIVE DESIGN
-            </h3>
-
-            <p>
-                Concepts visuels originaux,
-                affiches, réseaux sociaux et contenus digitaux.
-            </p>
-
+        <div class="skill">
+            Branding
         </div>
 
     </div>
@@ -1116,19 +503,23 @@ footer{
 
 <!-- CONTACT -->
 
-<section class="contact reveal" id="contact">
+<section class="contact" id="contact">
 
-    <div class="label">
-        04 / GET IN TOUCH
+    <div class="title">
+        04 — Contact
     </div>
 
     <h2>
-        HAVE AN<br>
-        <span>IDEA?</span>
+        Let's work<br>
+        together.
     </h2>
 
-    <a href="mailto:houssam@example.com" class="email">
-        houssam@example.com ↗
+    <p>
+        Vous avez un projet ou une idée ?
+    </p>
+
+    <a href="mailto:houssam@example.com">
+        houssam@example.com
     </a>
 
 </section>
@@ -1138,173 +529,15 @@ footer{
 
 <footer>
 
-    <div>
-        © 2026 <?= $name ?> — ALL RIGHTS RESERVED
-    </div>
+    <span>
+        © 2026 <?= $name ?>
+    </span>
 
-    <div class="socials">
-
-        <a href="#">
-            INSTAGRAM
-        </a>
-
-        <a href="#">
-            LINKEDIN
-        </a>
-
-        <a href="#">
-            BEHANCE
-        </a>
-
-    </div>
+    <span>
+        Portfolio
+    </span>
 
 </footer>
-
-
-<script>
-
-/* =========================
-   CURSOR
-========================= */
-
-const cursor = document.querySelector(".cursor");
-
-document.addEventListener("mousemove", function(e){
-
-    cursor.style.left = e.clientX + "px";
-    cursor.style.top = e.clientY + "px";
-
-});
-
-
-/* =========================
-   CURSOR HOVER
-========================= */
-
-const links = document.querySelectorAll("a, .project");
-
-links.forEach(link => {
-
-    link.addEventListener("mouseenter", () => {
-
-        cursor.style.width = "45px";
-        cursor.style.height = "45px";
-
-        cursor.style.background = "rgba(200,255,0,.15)";
-
-    });
-
-    link.addEventListener("mouseleave", () => {
-
-        cursor.style.width = "18px";
-        cursor.style.height = "18px";
-
-        cursor.style.background = "transparent";
-
-    });
-
-});
-
-
-/* =========================
-   SCROLL REVEAL
-========================= */
-
-const revealElements =
-document.querySelectorAll(".reveal");
-
-const observer =
-new IntersectionObserver(
-
-    function(entries){
-
-        entries.forEach(entry => {
-
-            if(entry.isIntersecting){
-
-                entry.target.classList.add("active");
-
-            }
-
-        });
-
-    },
-
-    {
-        threshold:.15
-    }
-
-);
-
-revealElements.forEach(element => {
-
-    observer.observe(element);
-
-});
-
-
-/* =========================
-   3D PROJECT EFFECT
-========================= */
-
-const projects =
-document.querySelectorAll(".project");
-
-projects.forEach(project => {
-
-    project.addEventListener("mousemove", function(e){
-
-        const rect =
-        project.getBoundingClientRect();
-
-        const x =
-        e.clientX - rect.left;
-
-        const percent =
-        (x / rect.width - .5) * 10;
-
-        project.style.transform =
-        `perspective(800px)
-         rotateY(${percent}deg)`;
-
-    });
-
-    project.addEventListener("mouseleave", function(){
-
-        project.style.transform =
-        "perspective(800px) rotateY(0deg)";
-
-    });
-
-});
-
-
-/* =========================
-   DYNAMIC TITLE
-========================= */
-
-const titles = [
-    "CREATIVE PORTFOLIO",
-    "DESIGN × CODE",
-    "WELCOME TO MY WORLD"
-];
-
-let titleIndex = 0;
-
-setInterval(() => {
-
-    titleIndex++;
-
-    if(titleIndex >= titles.length){
-        titleIndex = 0;
-    }
-
-    document.title =
-    "HOUSSAM — " + titles[titleIndex];
-
-}, 2500);
-
-</script>
 
 
 </body>
