@@ -1,7 +1,7 @@
-```php
+
 <?php
 
-$name = "Houssam";
+$name = "Houssam Marmoud";
 $job = "Web Developer";
 
 $modules = [
@@ -413,7 +413,7 @@ footer {
 
         <?= $job ?><br>
 
-        <span>Portfolio 2026.</span>
+        
 
     </h1>
 
