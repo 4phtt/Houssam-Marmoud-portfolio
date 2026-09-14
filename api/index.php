@@ -2,12 +2,16 @@
 <?php
 
 $name = "Houssam";
-$job = "Designer & Web Developer";
+$job = "Web Developer";
 
-$projects = [
-    ["name" => "HAIQ", "type" => "Branding"],
-    ["name" => "Portfolio", "type" => "Web Design"],
-    ["name" => "Creative App", "type" => "UI / UX"]
+$modules = [
+    ["code" => "M201", "name" => "Préparation d'un projet web"],
+    ["code" => "M202", "name" => "Approche agile"],
+    ["code" => "M203", "name" => "Gestion des données"],
+    ["code" => "M204", "name" => "Développement front-end"],
+    ["code" => "M205", "name" => "Développement back-end"],
+    ["code" => "M206", "name" => "Création d'une application Cloud native"],
+    ["code" => "M207", "name" => "Projet de synthèse"]
 ];
 
 ?>
@@ -40,6 +44,11 @@ body {
     color: #111;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 
 /* NAVBAR */
 
@@ -52,6 +61,7 @@ nav {
     justify-content: space-between;
 
     border-bottom: 1px solid #ddd;
+    background: #f5f5f3;
 }
 
 .logo {
@@ -65,8 +75,6 @@ nav {
 }
 
 .menu a {
-    text-decoration: none;
-    color: #111;
     font-size: 14px;
 }
 
@@ -96,18 +104,20 @@ nav {
     font-size: clamp(55px, 9vw, 120px);
     line-height: .9;
     letter-spacing: -5px;
-    max-width: 900px;
+    max-width: 1000px;
 }
 
 .hero h1 span {
     color: #777;
 }
 
-.hero .description {
+.description {
     margin-top: 35px;
-    max-width: 500px;
+
+    max-width: 550px;
 
     line-height: 1.7;
+
     color: #666;
 }
 
@@ -123,8 +133,6 @@ nav {
 
     background: #111;
     color: white;
-
-    text-decoration: none;
 
     border-radius: 3px;
 
@@ -173,56 +181,64 @@ section {
 
 .about-text p {
     color: #666;
+
     line-height: 1.8;
+
     margin-bottom: 15px;
 }
 
 
-/* PROJECTS */
+/* MODULES */
 
-.projects {
+.modules {
     border-top: 1px solid #ddd;
 }
 
-.project {
+.module {
     display: grid;
 
-    grid-template-columns: 10% 50% 30% 10%;
+    grid-template-columns: 15% 70% 15%;
 
     align-items: center;
 
-    padding: 30px 0;
+    padding: 28px 0;
 
     border-top: 1px solid #ddd;
 
     transition: .3s;
 }
 
-.project:last-child {
+.module:last-child {
     border-bottom: 1px solid #ddd;
 }
 
-.project:hover {
+.module:hover {
     padding-left: 15px;
+    background: #eeeeeb;
 }
 
-.project-number {
+.module-code {
     color: #999;
+
+    font-size: 14px;
 }
 
-.project-name {
-    font-size: 28px;
+.module-name {
+    font-size: 25px;
+
     font-weight: bold;
 }
 
-.project-type {
+.module-arrow {
+    text-align: right;
+
+    font-size: 20px;
+
     color: #777;
-    font-size: 13px;
 }
 
-.arrow {
-    text-align: right;
-    font-size: 20px;
+.module:hover .module-arrow {
+    color: #111;
 }
 
 
@@ -234,6 +250,7 @@ section {
 
 .skills-list {
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
 
     max-width: 800px;
@@ -257,6 +274,10 @@ section {
     text-align: center;
 }
 
+.contact .title {
+    color: #777;
+}
+
 .contact h2 {
     font-size: clamp(50px, 8vw, 100px);
 
@@ -265,6 +286,7 @@ section {
 
 .contact p {
     color: #aaa;
+
     margin-top: 20px;
 }
 
@@ -291,6 +313,7 @@ footer {
     border-top: 1px solid #333;
 
     display: flex;
+
     justify-content: space-between;
 
     font-size: 12px;
@@ -315,15 +338,16 @@ footer {
 
     .about {
         grid-template-columns: 1fr;
+
         gap: 40px;
     }
 
-    .project {
-        grid-template-columns: 15% 55% 30%;
+    .module {
+        grid-template-columns: 20% 65% 15%;
     }
 
-    .project-type {
-        display: none;
+    .module-name {
+        font-size: 18px;
     }
 
     .skills-list {
@@ -332,6 +356,7 @@ footer {
 
     footer {
         flex-direction: column;
+
         gap: 10px;
     }
 
@@ -355,13 +380,21 @@ footer {
 
     <div class="menu">
 
-        <a href="#about">About</a>
+        <a href="#about">
+            About
+        </a>
 
-        <a href="#projects">Projects</a>
+        <a href="#modules">
+            Modules
+        </a>
 
-        <a href="#skills">Skills</a>
+        <a href="#skills">
+            Skills
+        </a>
 
-        <a href="#contact">Contact</a>
+        <a href="#contact">
+            Contact
+        </a>
 
     </div>
 
@@ -377,20 +410,30 @@ footer {
     </p>
 
     <h1>
+
         <?= $job ?><br>
-        <span>based in Morocco.</span>
+
+        <span>Portfolio 2026.</span>
+
     </h1>
 
     <p class="description">
-        Je crée des designs simples, modernes et efficaces
-        et je développe des expériences web adaptées aux besoins
-        des utilisateurs.
+
+        Bienvenue sur mon portfolio.
+        Découvrez mon parcours, mes compétences
+        et les différents modules étudiés dans ma formation
+        en développement web.
+
     </p>
 
     <div>
-        <a href="#projects" class="button">
-            Voir mes projets →
+
+        <a href="#modules" class="button">
+
+            Voir mes modules →
+
         </a>
+
     </div>
 
 </div>
@@ -401,24 +444,32 @@ footer {
 <section class="about" id="about">
 
     <div class="title">
+
         01 — About
+
     </div>
 
     <div class="about-text">
 
         <h2>
-            Design with purpose.
+
+            À propos de moi.
+
         </h2>
 
         <p>
-            Je suis passionné par le design et le développement web.
-            J'aime transformer des idées en projets simples,
-            clairs et agréables à utiliser.
+
+            Je suis passionné par le développement web
+            et les nouvelles technologies.
+
         </p>
 
         <p>
-            Mon approche est basée sur la simplicité,
-            la créativité et l'attention aux détails.
+
+            Ma formation me permet de développer mes compétences
+            dans la conception, le développement et la gestion
+            de projets web.
+
         </p>
 
     </div>
@@ -426,38 +477,43 @@ footer {
 </section>
 
 
-<!-- PROJECTS -->
+<!-- MODULES -->
 
-<section class="projects" id="projects">
+<section class="modules" id="modules">
 
     <div class="title">
-        02 — Projects
+
+        02 — Modules de formation
+
     </div>
 
 
-    <?php foreach ($projects as $index => $project): ?>
+    <?php foreach ($modules as $module): ?>
 
-        <div class="project">
+        <div class="module">
 
-            <div class="project-number">
-                0<?= $index + 1 ?>
+            <div class="module-code">
+
+                <?= $module["code"] ?>
+
             </div>
 
-            <div class="project-name">
-                <?= $project["name"] ?>
+            <div class="module-name">
+
+                <?= $module["name"] ?>
+
             </div>
 
-            <div class="project-type">
-                <?= $project["type"] ?>
-            </div>
+            <div class="module-arrow">
 
-            <div class="arrow">
                 →
+
             </div>
 
         </div>
 
     <?php endforeach; ?>
+
 
 </section>
 
@@ -467,18 +523,12 @@ footer {
 <section class="skills" id="skills">
 
     <div class="title">
+
         03 — Skills
+
     </div>
 
     <div class="skills-list">
-
-        <div class="skill">
-            UI / UX Design
-        </div>
-
-        <div class="skill">
-            Graphic Design
-        </div>
 
         <div class="skill">
             HTML / CSS
@@ -493,7 +543,15 @@ footer {
         </div>
 
         <div class="skill">
-            Branding
+            SQL / Database
+        </div>
+
+        <div class="skill">
+            Git / GitHub
+        </div>
+
+        <div class="skill">
+            Cloud & Web Development
         </div>
 
     </div>
@@ -506,20 +564,28 @@ footer {
 <section class="contact" id="contact">
 
     <div class="title">
+
         04 — Contact
+
     </div>
 
     <h2>
+
         Let's work<br>
         together.
+
     </h2>
 
     <p>
+
         Vous avez un projet ou une idée ?
+
     </p>
 
     <a href="mailto:houssam@example.com">
+
         houssam@example.com
+
     </a>
 
 </section>
@@ -530,11 +596,15 @@ footer {
 <footer>
 
     <span>
+
         © 2026 <?= $name ?>
+
     </span>
 
     <span>
+
         Portfolio
+
     </span>
 
 </footer>
