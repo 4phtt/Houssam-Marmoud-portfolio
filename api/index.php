@@ -1,390 +1,326 @@
+<?php
+$name = "Houssam";
+$job = "Creative Designer & Developer";
+
+$projects = [
+    [
+        "title" => "HAIQ",
+        "category" => "Branding",
+        "image" => "images/project1.jpg",
+        "description" => "Création d'une identité visuelle moderne et originale."
+    ],
+    [
+        "title" => "Creative Website",
+        "category" => "Web Design",
+        "image" => "images/project2.jpg",
+        "description" => "Conception d'un site web moderne, dynamique et responsive."
+    ],
+    [
+        "title" => "Social Media",
+        "category" => "Graphic Design",
+        "image" => "images/project3.jpg",
+        "description" => "Création de contenus visuels pour les réseaux sociaux."
+    ]
+];
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Web Developer Portfolio</title>
+    <title><?= $name ?> — Portfolio</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+    <link rel="stylesheet" href="style.css">
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-            color: #222;
-        }
-
-        /* NAVBAR */
-        nav {
-            background: #111;
-            padding: 20px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav h2 {
-            color: white;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 25px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-        }
-
-        nav ul li a:hover {
-            color: #00aaff;
-        }
-
-        /* HOME */
-        #home {
-            min-height: 90vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: white;
-        }
-
-        #home h1 {
-            font-size: 50px;
-            margin-bottom: 15px;
-        }
-
-        #home span {
-            color: #00aaff;
-        }
-
-        #home p {
-            font-size: 20px;
-            color: #666;
-            margin-bottom: 25px;
-        }
-
-        .btn {
-            display: inline-block;
-            background: #00aaff;
-            color: white;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        /* SECTIONS */
-        section {
-            padding: 80px 8%;
-        }
-
-        section h2 {
-            text-align: center;
-            font-size: 35px;
-            margin-bottom: 40px;
-        }
-
-        /* ABOUT */
-        .about {
-            max-width: 800px;
-            margin: auto;
-            text-align: center;
-            line-height: 1.8;
-            font-size: 18px;
-        }
-
-        /* SKILLS */
-        .skills {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .skill {
-            background: white;
-            padding: 25px 40px;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px #ddd;
-        }
-
-        /* PROJECTS */
-        .projects {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-
-        .project {
-            background: white;
-            width: 300px;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px #ddd;
-        }
-
-        .project h3 {
-            margin-bottom: 10px;
-        }
-
-        .project p {
-            color: #666;
-            line-height: 1.5;
-        }
-
-        /* CONTACT */
-        .contact {
-            max-width: 600px;
-            margin: auto;
-        }
-
-        .contact input,
-        .contact textarea {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .contact textarea {
-            height: 150px;
-            resize: none;
-        }
-
-        .contact button {
-            background: #00aaff;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        /* FOOTER */
-        footer {
-            background: #111;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        /* MOBILE */
-        @media (max-width: 700px) {
-
-            nav {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav ul {
-                gap: 12px;
-            }
-
-            #home h1 {
-                font-size: 35px;
-            }
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
+<!-- CURSOR -->
+<div class="cursor"></div>
+
+<!-- NAVBAR -->
+<header>
+
+    <div class="logo">
+        H<span>.</span>
+    </div>
+
     <nav>
-
-        <h2>Houssam</h2>
-
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Modules</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-
+        <a href="#home">Accueil</a>
+        <a href="#about">À propos</a>
+        <a href="#projects">Projets</a>
+        <a href="#skills">Compétences</a>
+        <a href="#contact">Contact</a>
     </nav>
 
+    <a href="#contact" class="nav-button">
+        Let's talk ↗
+    </a>
 
-    <!-- HOME -->
-    <section id="home">
+</header>
 
-        <div>
 
-            <h1>Hello, I'm <span>Houssam</span></h1>
+<!-- HERO -->
+<section id="home" class="hero">
 
-            <p>Web Developer</p>
+    <div class="hero-content">
 
-            <a href="#projects" class="btn">
-                View My Work
+        <p class="small-title">
+            ✦ PORTFOLIO / 2026
+        </p>
+
+        <h1>
+            Je transforme<br>
+            <span>les idées</span> en<br>
+            expériences.
+        </h1>
+
+        <p class="hero-description">
+            Designer créatif & développeur passionné par la création
+            d'expériences digitales modernes, originales et mémorables.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#projects" class="primary-button">
+                Voir mes projets ↗
+            </a>
+
+            <a href="#about" class="secondary-button">
+                En savoir plus
             </a>
 
         </div>
 
-    </section>
+    </div>
 
+    <div class="hero-visual">
 
-    <!-- ABOUT -->
-    <section id="about">
+        <div class="circle"></div>
 
-        <h2>About Me</h2>
-
-        <div class="about">
-
-            <p>
-                Hello! I'm a passionate Web Developer interested in
-                creating modern, responsive and user-friendly websites.
-                I enjoy developing web applications and learning new
-                technologies.
-            </p>
-
+        <div class="floating-card card-1">
+            DESIGN
         </div>
 
-    </section>
-
-
-    <!-- SKILLS -->
-    <section id="skills">
-
-        <h2>My Skills</h2>
-
-        <div class="skills">
-
-            <div class="skill">
-                <h3>HTML</h3>
-            </div>
-
-            <div class="skill">
-                <h3>CSS</h3>
-            </div>
-
-            <div class="skill">
-                <h3>PHP</h3>
-            </div>
-
-            <div class="skill">
-                <h3>JavaScript</h3>
-            </div>
-
-            <div class="skill">
-                <h3>MySQL</h3>
-            </div>
-
+        <div class="floating-card card-2">
+            CODE
         </div>
 
-    </section>
-
-
-    <!-- PROJECTS -->
-    <section id="projects">
-
-        <h2>My Projects</h2>
-
-        <div class="projects">
-
-            <div class="project">
-
-                <h3>Portfolio Website</h3>
-
-                <p>
-                    A personal portfolio website developed using
-                    HTML, CSS and PHP.
-                </p>
-
-            </div>
-
-
-            <div class="project">
-
-                <h3>Web Application</h3>
-
-                <p>
-                    A web application developed using PHP,
-                    MySQL, HTML and CSS.
-                </p>
-
-            </div>
-
-
-            <div class="project">
-
-                <h3>Responsive Website</h3>
-
-                <p>
-                    A responsive website designed to work on
-                    computers, tablets and mobile devices.
-                </p>
-
-            </div>
-
+        <div class="floating-card card-3">
+            ✦ CREATE
         </div>
 
-    </section>
-
-
-    <!-- CONTACT -->
-    <section id="contact">
-
-        <h2>Contact Me</h2>
-
-        <div class="contact">
-
-            <form action="" method="POST">
-
-                <input
-                    type="text"
-                    name="name"
-                    placeholder="Your Name"
-                    required
-                >
-
-                <input
-                    type="email"
-                    name="email"
-                    placeholder="Your Email"
-                    required
-                >
-
-                <textarea
-                    name="message"
-                    placeholder="Your Message"
-                    required
-                ></textarea>
-
-                <button type="submit">
-                    Send Message
-                </button>
-
-            </form>
-
+        <div class="profile-circle">
+            <img src="images/profile.jpg" alt="Profile">
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- FOOTER -->
-    <footer>
+<!-- MARQUEE -->
+<div class="marquee">
+
+    <div class="marquee-content">
+        DESIGN ✦ DEVELOPMENT ✦ CREATIVITY ✦ BRANDING ✦ MOTION ✦
+        DESIGN ✦ DEVELOPMENT ✦ CREATIVITY ✦ BRANDING ✦ MOTION ✦
+    </div>
+
+</div>
+
+
+<!-- ABOUT -->
+<section id="about" class="section about">
+
+    <div class="section-number">
+        01 / ABOUT
+    </div>
+
+    <div class="about-content">
+
+        <h2>
+            Je crée des choses<br>
+            qui <span>attirent l'attention.</span>
+        </h2>
 
         <p>
-            © <?php echo date("Y"); ?> PHMR. All rights reserved.
+            Je suis un créatif passionné par le design, le développement
+            web et la communication visuelle. Mon objectif est de créer
+            des projets qui ne sont pas seulement beaux, mais également
+            utiles et mémorables.
         </p>
 
-    </footer>
+        <p>
+            J'aime expérimenter avec les couleurs, les animations,
+            la typographie et les nouvelles technologies.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+<section id="projects" class="section projects">
+
+    <div class="section-number">
+        02 / PROJECTS
+    </div>
+
+    <div class="projects-header">
+
+        <h2>
+            Selected<br>
+            <span>Works.</span>
+        </h2>
+
+        <p>
+            Une sélection de projets réalisés avec passion.
+        </p>
+
+    </div>
+
+
+    <div class="project-grid">
+
+        <?php foreach ($projects as $project): ?>
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="<?= $project['image'] ?>"
+                        alt="<?= $project['title'] ?>"
+                    >
+
+                    <div class="project-overlay">
+                        View project ↗
+                    </div>
+
+                </div>
+
+                <div class="project-info">
+
+                    <div>
+                        <h3><?= $project['title'] ?></h3>
+
+                        <p>
+                            <?= $project['description'] ?>
+                        </p>
+                    </div>
+
+                    <span>
+                        <?= $project['category'] ?>
+                    </span>
+
+                </div>
+
+            </article>
+
+        <?php endforeach; ?>
+
+    </div>
+
+</section>
+
+
+<!-- SKILLS -->
+<section id="skills" class="section skills">
+
+    <div class="section-number">
+        03 / SKILLS
+    </div>
+
+    <h2>
+        What I<br>
+        <span>do.</span>
+    </h2>
+
+
+    <div class="skills-grid">
+
+        <div class="skill">
+            <span>01</span>
+            <h3>UI / UX Design</h3>
+            <p>
+                Interfaces modernes et expériences utilisateur
+                intuitives.
+            </p>
+        </div>
+
+        <div class="skill">
+            <span>02</span>
+            <h3>Web Development</h3>
+            <p>
+                Sites web rapides, responsive et interactifs.
+            </p>
+        </div>
+
+        <div class="skill">
+            <span>03</span>
+            <h3>Branding</h3>
+            <p>
+                Identités visuelles fortes et cohérentes.
+            </p>
+        </div>
+
+        <div class="skill">
+            <span>04</span>
+            <h3>Motion Design</h3>
+            <p>
+                Animations et interactions pour donner vie aux projets.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+
+    <p class="small-title">
+        04 / CONTACT
+    </p>
+
+    <h2>
+        Let's create<br>
+        something <span>great.</span>
+    </h2>
+
+    <a href="mailto:contact@example.com" class="email">
+        contact@example.com ↗
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <div>
+        © 2026 <?= $name ?>
+    </div>
+
+    <div class="socials">
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Behance</a>
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
