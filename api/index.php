@@ -8,7 +8,7 @@ $modules = [
         "code" => "M201",
         "name" => "Préparation d'un projet web",
         "docs" => [
-            ["title" => "Atelier 1 - Cahier des charges", "file" => "docs/m201-atelier1.pdf"],
+            ["title" => "Atelier 1 - Cahier des charges", "file" => "docs/Houssam_Marmoud_UML_Atelier.pdf"],
             ["title" => "Atelier 2 - Maquettage", "file" => "docs/m201-atelier2.pdf"],
             ["title" => "Atelier 3 - Planification", "file" => "docs/m201-atelier3.pdf"]
         ]
