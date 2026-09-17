@@ -4,7 +4,15 @@ $name = "Houssam Marmoud";
 $job = "Web Developer";
 
 $modules = [
-    ["code" => "M201", "name" => "Préparation d'un projet web"],
+    [
+        "code" => "M201",
+        "name" => "Préparation d'un projet web",
+        "docs" => [
+            ["title" => "Atelier 1 - Cahier des charges", "file" => "docs/m201-atelier1.pdf"],
+            ["title" => "Atelier 2 - Maquettage", "file" => "docs/m201-atelier2.pdf"],
+            ["title" => "Atelier 3 - Planification", "file" => "docs/m201-atelier3.pdf"]
+        ]
+    ],
     ["code" => "M202", "name" => "Approche agile"],
     ["code" => "M203", "name" => "Gestion des données"],
     ["code" => "M204", "name" => "Développement front-end"],
@@ -225,6 +233,8 @@ section {
 
     grid-template-columns: 15% 70% 15%;
 
+    grid-template-rows: auto auto;
+
     align-items: center;
 
     padding: 28px 0;
@@ -265,6 +275,48 @@ section {
 
 .module:hover .module-arrow {
     color: #111;
+}
+
+.module-docs {
+    grid-column: 1 / -1;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+.module-doc {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 8px 14px;
+
+    border: 1px solid #ddd;
+
+    background: #fff;
+
+    font-size: 12px;
+
+    color: #444;
+
+    transition: .3s;
+}
+
+.module-doc:hover {
+    background: #111;
+    color: #fff;
+    border-color: #111;
+}
+
+.module-doc-icon {
+    font-size: 13px;
 }
 
 
@@ -620,6 +672,26 @@ footer {
                 →
 
             </div>
+
+            <?php if (!empty($module["docs"])): ?>
+
+                <div class="module-docs">
+
+                    <?php foreach ($module["docs"] as $doc): ?>
+
+                        <a href="<?= $doc['file'] ?>" class="module-doc" target="_blank">
+
+                            <span class="module-doc-icon">📄</span>
+
+                            <?= $doc["title"] ?>
+
+                        </a>
+
+                    <?php endforeach; ?>
+
+                </div>
+
+            <?php endif; ?>
 
         </div>
 
