@@ -1,4 +1,3 @@
-
 <?php
 
 $name = "Houssam Marmoud";
@@ -12,6 +11,33 @@ $modules = [
     ["code" => "M205", "name" => "Développement back-end"],
     ["code" => "M206", "name" => "Création d'une application Cloud native"],
     ["code" => "M207", "name" => "Projet de synthèse"]
+];
+
+$projects = [
+    [
+        "name" => "Portfolio personnel",
+        "description" => "Site vitrine responsive présentant mon parcours, mes compétences et mes modules de formation.",
+        "tech" => "HTML / CSS / PHP",
+        "link" => "#"
+    ],
+    [
+        "name" => "Application de gestion de tâches",
+        "description" => "Application web permettant de créer, organiser et suivre des tâches avec une base de données MySQL.",
+        "tech" => "PHP / SQL / JavaScript",
+        "link" => "#"
+    ],
+    [
+        "name" => "API Cloud native",
+        "description" => "API RESTful déployée sur le cloud pour la gestion de données en temps réel.",
+        "tech" => "Node.js / Cloud",
+        "link" => "#"
+    ],
+    [
+        "name" => "Projet de synthèse",
+        "description" => "Projet final regroupant les compétences acquises tout au long de la formation.",
+        "tech" => "Full-stack",
+        "link" => "#"
+    ]
 ];
 
 ?>
@@ -242,6 +268,83 @@ section {
 }
 
 
+/* PROJECTS */
+
+.projects {
+    border-top: 1px solid #ddd;
+}
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.project-card {
+    padding: 35px;
+
+    border: 1px solid #ddd;
+
+    background: #fff;
+
+    transition: .3s;
+}
+
+.project-card:hover {
+    background: #111;
+    color: #fff;
+    border-color: #111;
+}
+
+.project-name {
+    font-size: 24px;
+
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}
+
+.project-description {
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color: #666;
+
+    margin-bottom: 20px;
+}
+
+.project-card:hover .project-description {
+    color: #bbb;
+}
+
+.project-footer {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    color: #999;
+}
+
+.project-card:hover .project-footer {
+    color: #ccc;
+}
+
+.project-arrow {
+    font-size: 18px;
+}
+
+
 /* SKILLS */
 
 .skills {
@@ -350,6 +453,10 @@ footer {
         font-size: 18px;
     }
 
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
     .skills-list {
         grid-template-columns: 1fr;
     }
@@ -386,6 +493,10 @@ footer {
 
         <a href="#modules">
             Modules
+        </a>
+
+        <a href="#projects">
+            Projects
         </a>
 
         <a href="#skills">
@@ -518,13 +629,66 @@ footer {
 </section>
 
 
+<!-- PROJECTS -->
+
+<section class="projects" id="projects">
+
+    <div class="title">
+
+        03 — Projets
+
+    </div>
+
+    <div class="projects-grid">
+
+        <?php foreach ($projects as $project): ?>
+
+            <a href="<?= $project['link'] ?>" class="project-card">
+
+                <div class="project-name">
+
+                    <?= $project["name"] ?>
+
+                </div>
+
+                <div class="project-description">
+
+                    <?= $project["description"] ?>
+
+                </div>
+
+                <div class="project-footer">
+
+                    <span>
+
+                        <?= $project["tech"] ?>
+
+                    </span>
+
+                    <span class="project-arrow">
+
+                        →
+
+                    </span>
+
+                </div>
+
+            </a>
+
+        <?php endforeach; ?>
+
+    </div>
+
+</section>
+
+
 <!-- SKILLS -->
 
 <section class="skills" id="skills">
 
     <div class="title">
 
-        03 — Skills
+        04 — Skills
 
     </div>
 
@@ -565,7 +729,7 @@ footer {
 
     <div class="title">
 
-        04 — Contact
+        05 — Contact
 
     </div>
 
@@ -613,4 +777,3 @@ footer {
 </body>
 
 </html>
-```
