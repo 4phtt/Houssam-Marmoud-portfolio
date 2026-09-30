@@ -9,6 +9,7 @@ $modules = [
         "name" => "Préparation d'un projet web",
         "docs" => [
             ["title" => "Atelier 1 - Cahier des charges", "file" => "docs/Houssam_Marmoud_UML_Atelier.pdf"]
+            ["title" => "Atelier 1 - Cahier des charges", "file" => "docs/Houssam_Marmoud_gant-pert.pdf"]
         ]
     ],
     ["code" => "M202", "name" => "Approche agile"],
@@ -59,7 +60,7 @@ $projects = [
 <title><?= $name ?> | Portfolio</title>
 
 <style>
-
+    
 * {
     margin: 0;
     padding: 0;
