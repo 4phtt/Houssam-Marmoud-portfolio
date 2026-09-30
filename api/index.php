@@ -9,10 +9,11 @@ $modules = [
         "name" => "Préparation d'un projet web",
         "docs" => [
             ["title" => "Atelier 1 - Cahier des charges", "file" => "docs/Houssam_Marmoud_UML_Atelier.pdf"]
-            ["title" => "Atelier 1 - Cahier des charges", "file" => "docs/Houssam_Marmoud_gant-pert.pdf"]
         ]
     ],
-    ["code" => "M202", "name" => "Approche agile"],
+    ["code" => "M202", "name" => "Approche agile","docs" => [
+            ["title" => "Atelier 1 - Cahier des charges", "file" => "docs/Houssam_Marmoud_gant-pert.pdf"]
+        ]],
     ["code" => "M203", "name" => "Gestion des données"],
     ["code" => "M204", "name" => "Développement front-end"],
     ["code" => "M205", "name" => "Développement back-end"],
