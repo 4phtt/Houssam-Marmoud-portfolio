@@ -14,7 +14,7 @@ $modules = [
         ]
     ],
     ["code" => "M202", 
-    "name" => "Approche agile"
+    "name" => "Approche agile",
     "docs" => [
         ["title" => "Atelier 1 - Cahier des charges", "file" => "docs/Houssam_Marmoud_gant-pert.pdf"]
     ]],
