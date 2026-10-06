@@ -8,12 +8,16 @@ $modules = [
         "code" => "M201",
         "name" => "Préparation d'un projet web",
         "docs" => [
-            ["title" => "Atelier 1 - Cahier des charges", "file" => "docs/Houssam_Marmoud_UML_Atelier.pdf"]
+            ["title" => "Atelier 1 - Agence d'immobilier", "file" => "docs/Houssam_Marmoud_UML_Atelier.pdf"]
+            ["title" => "Atelier 1 - Figma 1", "file" => "https://www.figma.com/design/dlLzsFwldxiQ1UxNoYBAvi/Untitled?t=F7S3icPtzOihkwu7-0"]
+            ["title" => "Atelier 1 - Figma 2", "file" => "https://www.figma.com/design/TH2Wq7lId45mr4Aw6qLTG9/Untitled?node-id=0-1&p=f&t=F7S3icPtzOihkwu7-0"]
         ]
     ],
-    ["code" => "M202", "name" => "Approche agile","docs" => [
-            ["title" => "Atelier 1 - Cahier des charges", "file" => "docs/Houssam_Marmoud_gant-pert.pdf"]
-        ]],
+    ["code" => "M202", 
+    "name" => "Approche agile"
+    "docs" => [
+        ["title" => "Atelier 1 - Cahier des charges", "file" => "docs/Houssam_Marmoud_gant-pert.pdf"]
+    ]],
     ["code" => "M203", "name" => "Gestion des données"],
     ["code" => "M204", "name" => "Développement front-end"],
     ["code" => "M205", "name" => "Développement back-end"],
