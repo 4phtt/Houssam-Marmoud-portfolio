@@ -8,8 +8,8 @@ $modules = [
         "code" => "M201",
         "name" => "Préparation d'un projet web",
         "docs" => [
-            ["title" => "Atelier 1 - Agence d'immobilier", "file" => "docs/Houssam_Marmoud_UML_Atelier.pdf"]
-            ["title" => "Atelier 1 - Figma 1", "file" => "https://www.figma.com/design/dlLzsFwldxiQ1UxNoYBAvi/Untitled?t=F7S3icPtzOihkwu7-0"]
+            ["title" => "Atelier 1 - Agence d'immobilier", "file" => "docs/Houssam_Marmoud_UML_Atelier.pdf"],
+            ["title" => "Atelier 1 - Figma 1", "file" => "https://www.figma.com/design/dlLzsFwldxiQ1UxNoYBAvi/Untitled?t=F7S3icPtzOihkwu7-0"],
             ["title" => "Atelier 1 - Figma 2", "file" => "https://www.figma.com/design/TH2Wq7lId45mr4Aw6qLTG9/Untitled?node-id=0-1&p=f&t=F7S3icPtzOihkwu7-0"]
         ]
     ],
