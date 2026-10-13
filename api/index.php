@@ -17,6 +17,7 @@ $modules = [
     "name" => "Approche agile",
     "docs" => [
         ["title" => "Atelier 1 - Cahier des charges", "file" => "docs/Houssam_Marmoud_gant-pert.pdf"]
+        ["title" => "Atelier 1 - Cahier des charges", "file" => "docs/Travail individuel  Agile et Scrum.pdf"]
     ]],
     ["code" => "M203", "name" => "Gestion des données"],
     ["code" => "M204", "name" => "Développement front-end"],
