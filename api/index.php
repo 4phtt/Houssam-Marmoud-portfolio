@@ -18,7 +18,8 @@ $modules = [
     "docs" => [
         ["title" => "Atelier 1 - Cahier des charges", "file" => "docs/Houssam_Marmoud_gant-pert.pdf"],
         ["title" => "Atelier 2 - Travail individuel Partie.1", "file" => "docs/Travail individuel  Agile et Scrum.pdf"],
-        ["title" => "Atelier 4 - git et gitub : travail collaboratif", "file" => "https://atelier-eta-blond.vercel.app"]
+        ["title" => "Atelier 4 - git et gitub : travail collaboratif", "file" => "https://atelier-eta-blond.vercel.app"],
+        ["title" => "Atelier 2 - Travail individuel Partie.1", "file" => "docs/Atelier 5.pdf"],
     ]],
     ["code" => "M203", "name" => "Gestion des données",
     "docs" =>[
