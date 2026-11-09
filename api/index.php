@@ -20,11 +20,11 @@ $modules = [
         ["title" => "Atelier 2 - Travail individuel Partie.1", "file" => "docs/Travail individuel  Agile et Scrum.pdf"],
         ["title" => "Atelier 4 - git et gitub : travail collaboratif", "file" => "https://atelier-eta-blond.vercel.app"],
         ["title" => "Atelier 5 - Examen de fin de module régional", "file" => "docs/Atelier 5.pdf"],
+        ["title" => "Atelier 6 - gestion des stagiaires. ", "file" => "https://atelier-6-stagiaires.vercel.app"],
+        ["title" => "Atelier 7 - Atelier7", "file" => "docs/Atelier7.pdf"],
+
     ]],
-    ["code" => "M203", "name" => "Gestion des données",
-    "docs" =>[
-        ["title" => "Atelier 6 - gestion des stagiaires. ", "file" => "https://atelier-6-stagiaires.vercel.app"]
-    ]],
+    ["code" => "M203", "name" => "Gestion des données",],
     ["code" => "M204", "name" => "Développement front-end"],
     ["code" => "M205", "name" => "Développement back-end"],
     ["code" => "M206", "name" => "Création d'une application Cloud native"],
