@@ -24,7 +24,10 @@ $modules = [
         ["title" => "Atelier 7 - Atelier7", "file" => "docs/Atelier7.pdf"],
 
     ]],
-    ["code" => "M203", "name" => "Gestion des données",],
+    ["code" => "M203", "name" => "Gestion des données",
+    "docs" => [
+        ["title" => "Atelier 1 - Rapport", "file" => "docs/RapportAtelier1.docx"],     
+    ]],
     ["code" => "M204", "name" => "Développement front-end"],
     ["code" => "M205", "name" => "Développement back-end"],
     ["code" => "M206", "name" => "Création d'une application Cloud native"],
