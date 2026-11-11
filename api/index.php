@@ -26,7 +26,7 @@ $modules = [
     ]],
     ["code" => "M203", "name" => "Gestion des données",
     "docs" => [
-        ["title" => "Atelier 1 - Rapport", "file" => "docs/RapportAtelier1.docx"],     
+        ["title" => "Atelier 1 - Rapport", "file" => "docs/RapportAtelier1.pdf"],     
     ]],
     ["code" => "M204", "name" => "Développement front-end"],
     ["code" => "M205", "name" => "Développement back-end"],
