@@ -43,10 +43,10 @@ $projects = [
         "link" => "#"
     ],
     [
-        "name" => "Application de gestion de tâches",
-        "description" => "Application web permettant de créer, organiser et suivre des tâches avec une base de données MySQL.",
+        "name" => "Qrib.ma",
+        "description" => "Qrib.ma is an online marketplace that connects buyers and sellers across Morocco, making it easy to find great deals or post your own ads.",
         "tech" => "PHP / SQL / JavaScript",
-        "link" => "#"
+        "link" => "https://qribma.vercel.app/"
     ],
     [
         "name" => "API Cloud native",
