@@ -46,7 +46,7 @@ $projects = [
         "name" => "Qrib.ma",
         "description" => "Qrib.ma is an online marketplace that connects buyers and sellers across Morocco, making it easy to find great deals or post your own ads.",
         "tech" => "PHP / SQL / JavaScript",
-        "link" => "https://qribma.vercel.app/"
+        "link" => "<a href=\"https://qribma.vercel.app/\" target=\"_blank\"></a>"
     ],
     [
         "name" => "API Cloud native",
