@@ -28,6 +28,7 @@ $modules = [
     "docs" => [
         ["title" => "Atelier 1 - Rapport", "file" => "docs/RapportAtelier1.pdf"], 
         ["title" => "Atelier 3 - Rapport", "file" => "docs/RapportAtelier3.pdf"],
+        ["title" => "Atelier 4 - Rapport", "file" => "docs/RapportAtelier4.pdf"],
     ]],
     ["code" => "M204", "name" => "Développement front-end"],
     ["code" => "M205", "name" => "Développement back-end"],
@@ -561,7 +562,7 @@ footer {
             Modules
         </a>
 
-        <a href="#projects">
+        <a href="#projects" target="_blank">
             Projects
         </a>
 
