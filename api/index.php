@@ -31,6 +31,7 @@ $modules = [
         ["title" => "Atelier 4 - Rapport", "file" => "docs/RapportAtelier4.pdf"],
         ["title" => "Atelier 5 - Rapport", "file" => "docs/RapportAtelier5.pdf"],
         ["title" => "Atelier 7 - Rapport", "file" => "docs/RapportAtelier7.pdf"],
+        ["title" => "EFMsession - EFMsession", "file" => "docs/examenfinsession.pdf"],
     ]],
     ["code" => "M204", "name" => "Développement front-end"],
     ["code" => "M205", "name" => "Développement back-end"],
